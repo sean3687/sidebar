@@ -1,38 +1,115 @@
-.App {
+.programHeader{
+  color:black;
+}
+
+.program_title{
+  background-color: #0B4177;
+  color: #8DC63F;
+  font-size: 40px;
+  padding: 30px;
+  font-weight: 600;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.program_progress{
   display: flex;
   flex-direction: column;
+  background-color: #24335A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.direct{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  font-weight: 300;
+  font-size: 14px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  padding:5px 30px;
+  color:#EBEBEB
 }
 
-.App-link {
-  color: #61dafb;
+.direct_icon{
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.direct_text{
+  
 }
+
+.displayProgress{
+  display: flex;
+  flex-direction: column;
+}
+
+.progress_title{
+  padding:5px 30px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #E5E5E5;
+}
+
+.progress_completion{
+  color: #E5E5E5;
+  font-size: 12px;
+  padding:5px 30px;
+  margin-bottom: 15px;
+}
+
+
+
+.searchBox{
+  background-color: #14244D;
+  padding: 20px 30px;
+  color: black;
+  height: auto;
+  align-items: center;
+  
+}
+
+.searchBox_input{
+
+}
+
+
+.task_main{
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto";
+}
+.title{
+  margin-left: 10px;
+  font-size: 18px;
+  color:#FFFFFF;
+  margin-bottom: 3px;
+  
+}
+.task_description{
+  color:#ACACAC;
+  font-weight: 200;
+  margin-left: 25px;
+  display:flex;
+  flex-direction: row;
+  font-size: 12px;
+  font-family: "Roboto";
+  font-weight: 300;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+.type_des{
+  margin-right: 10px;
+  color:#ACACAC;
+}
+
+.duration_des{
+  margin-right: 10px;
+  color:#ACACAC;
+}
+
+.icon_des{
+  margin-right: 10px;
+  color:#ACACAC;
+}
+
