@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
-import programdatabase from './FakeDatabase';
 import './App.css';
 import { HiChevronLeft,HiMagnifyingGlass } from "react-icons/hi2";
 import Accordion from 'react-bootstrap/Accordion'
@@ -14,19 +13,24 @@ import store from './redux/store'
 
 
 function App() {
-  const [fakeData, setFakeData] = useState(store.getState())
+  const [fakeData, setFakeData] = useState(store.getState().fakeData)
+  const [progress, setProgress] = useState(store.getState().progress)
   const [completion,changeCompletion]= useState(20)
+  const [test, setTest] = useState("")
+
 
   useEffect(() => {
-    //Runs on the first render
-    //And any time any dependency value changes
+    
+      setFakeData(store.getState().fakeData)
+      setProgress(store.getState().progress)
+     console.log(store.getState().progress)
   
-  }, fakeData);
-
-  function updateProgress(){
-    if()
+  }, [store.getState().progress]);
+  
+  const handleChange = (event) => {
+    const value = event.target.value
+    setTest(value)
   }
-  
 
   return (
     <div className="program">
@@ -56,7 +60,7 @@ function App() {
             </div>
           </div>
           <div className="searchBox">
-          <InputGroup className="searchBox_input">
+          <InputGroup className="searchBox_input" onChange={handleChange}>
             <InputGroup.Text><HiMagnifyingGlass/></InputGroup.Text>
             <Form.Control placeholder="Search by assignment"/>
           </InputGroup>
@@ -64,7 +68,7 @@ function App() {
         </div>
         <div className='programList'>
           
-            {programdatabase.map((route,key) => (
+            {fakeData.map((route,key) => (
             <Accordion className="list">
               <Accordion.Item>
               <Accordion.Header>{route.name}</Accordion.Header>
